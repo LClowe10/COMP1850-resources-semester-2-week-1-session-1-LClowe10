@@ -2,4 +2,5 @@
 -- Expected Columns:
 -- DepartmentName, TotalEnrolments
 
-SELECT DepartmentName, TotalEnrolments FROM department
+SELECT DepartmentName, Count(*) AS TotalEnrolments 
+FROM student JOIN

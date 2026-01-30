@@ -2,4 +2,4 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName, TotalCreditsPassed
 
-SELECT StudentId, FirstName, LastName, TotalCreditsPassed
+SELECT StudentId, FirstName, LastName, TotalCreditsPassed FROM student
