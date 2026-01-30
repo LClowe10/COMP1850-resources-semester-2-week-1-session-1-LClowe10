@@ -3,4 +3,9 @@
 -- DepartmentName, TotalEnrolments
 
 SELECT DepartmentName, Count(*) AS TotalEnrolments 
-FROM student JOIN
+FROM Enrolment E 
+JOIN Course C 
+ON E.CourseId = C.CourseId
+JOIN Department D 
+ON C.DepartmentId = D.DepartmentId
+GROUP BY D.DepartmentId;

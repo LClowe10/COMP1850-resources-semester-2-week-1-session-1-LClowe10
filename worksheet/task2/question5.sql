@@ -2,4 +2,11 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName, TotalCreditsPassed
 
-SELECT StudentId, FirstName, LastName, TotalCreditsPassed FROM student
+SELECT S.StudentId, FirstName, LastName, SUM(Credits) AS TotalCreditsPassed 
+FROM enrolment E 
+JOIN student S
+ON E.StudentId = S.StudentId
+JOIN course C 
+ON E.CourseId = C.CourseId
+WHERE Grade >= 40
+GROUP BY S.StudentId;
